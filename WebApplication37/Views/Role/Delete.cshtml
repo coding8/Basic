@@ -1,0 +1,24 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h3>确定要删除该角色吗? </h3>
+@*<p>Deleting this Role will remove all users from this role. It will not delete the users.</p>*@
+<div>
+    <dl class="dl-horizontal">
+        <dt> 角色名 </dt>
+        <dd> @Html.DisplayFor(model => model.Name) </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回", "Index")
+        </div>
+    }
+</div>
