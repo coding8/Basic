@@ -5,6 +5,14 @@
 
   <mvcSiteMapNode title="Home" controller="Home" action="Index">
     <mvcSiteMapNode title="About" controller="Home" action="About"/>
+
+    <mvcSiteMapNode title="用户管理" clickable="false">
+      <mvcSiteMapNode title="用户" controller="User" action="Index" />
+      <mvcSiteMapNode title="角色" controller="Role" action="Index" />
+      <mvcSiteMapNode title="用户角色" controller="User" action="ListUserAndRole" />
+      <mvcSiteMapNode title="重置密码" controller="User" action="ResetPassword"/>
+    </mvcSiteMapNode>
+
   </mvcSiteMapNode>
 
 </mvcSiteMap>

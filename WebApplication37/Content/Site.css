@@ -22,3 +22,97 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* MvcSiteMap breadcrumb */
+/*重写bootstrap.content值，取消斜杠（默认为 /）。*/
+.breadcrumb > li + li:before {
+    content: "";
+    /*padding: 0;*/
+}
+/* > */
+.divider {
+    margin-left: 0.5em;
+}
+
+/* end MvcSiteMap */
+
+/* bootstrap */
+/*--第三级菜单位置*/
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+    /*.dropdown-submenu:hover>.dropdown-menu{display:block;}*/
+    .dropdown-submenu > a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #cccccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #ffffff;
+    }
+
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+
+        .dropdown-submenu.pull-left > .dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+/* --end 第三级菜单位置*/
+/* --重写bootstrap.css中的color值，使子菜单字体颜色可见（默认为白色）。*/
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    color: white;
+    background-color: #428BCA;
+}
+/* --end-- */
+/* --改变导航栏默认值*/
+.navbar-inverse {
+    background-color: #428BCA; /*#3E4247*/
+    border-color: #1d73be;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        /*color: #cccccc;*/
+        color: white;
+    }
+
+    .navbar-inverse .navbar-nav > li:hover {
+        background-color: #1d73be;
+    }
+
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        background-color: #1d73be;
+    }
+
+    .navbar-inverse .navbar-nav > .dropdown > a .caret {
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+/* --end 改变导航栏默认值*/
