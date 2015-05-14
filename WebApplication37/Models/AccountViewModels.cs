@@ -49,9 +49,8 @@ namespace WebApplication37.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "电子邮件")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "用户")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -65,12 +64,11 @@ namespace WebApplication37.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
-        [Display(Name = "电子邮件")]
-        public string Email { get; set; }
+        [Display(Name = "用户名")]
+        public string UserName { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "密码")]
         public string Password { get; set; }
