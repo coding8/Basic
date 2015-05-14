@@ -265,6 +265,7 @@ namespace WebApplication37.Controllers
             if (user == null)
             {
                 ViewBag.Msg = "无此用户 !";
+                ModelState.AddModelError("", "无此用户！");
                 return View();
             }
 
@@ -274,6 +275,8 @@ namespace WebApplication37.Controllers
             var newPassword = "123";
             UserManager.AddPassword(user.Id, newPassword);
             ViewBag.Msg = "密码已重置，新密码是： 123.";
+            ModelState.AddModelError("", "密码已重置，新密码是： 123");
+
             return View();
         }
     }
